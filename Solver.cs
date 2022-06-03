@@ -1,10 +1,7 @@
 public class Solver{
 
     private string[] readFile { get; set; }
-    /// <summary>
-    /// Constructor
-    /// </summary>
-    /// <param name="path"></param>
+
     public Solver(string path)
     {
         this.readFile = File.ReadAllLines(path);
@@ -37,10 +34,7 @@ public class Solver{
 
         return "Based on the first interpretation, the puzzle answer is " + (horizontal * vertical).ToString();
     }
-    /// <summary>
-    /// Solution to the second challenge in the puzzle
-    /// </summary>
-    /// <returns></returns>
+
     public string SolveSecondPuzzle()
     {
         long horizontal = 0;
