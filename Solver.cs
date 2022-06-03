@@ -6,10 +6,7 @@ public class Solver{
     {
         this.readFile = File.ReadAllLines(path);
     }    
-    /// <summary>
-    /// Solution to the first challenge in the puzzle
-    /// </summary>
-    /// <returns></returns>
+
     public string SolveFirstPuzzle() {
         long horizontal = 0;
         long vertical = 0;        
