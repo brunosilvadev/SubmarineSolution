@@ -14,15 +14,16 @@ public class Solver{
         foreach(var s in this.readFile){
             string[] instruction = s.Split(' ');
             if(instruction.Length > 0){
+                long command = Convert.toInt64(instruction[1]);
                 switch (instruction[0]){
                     case "forward":
-                    horizontal = horizontal + Convert.ToInt64(instruction[1]);
+                    horizontal += command;
                     break;
                     case "down":
-                    vertical = vertical + Convert.ToInt64(instruction[1]);
+                    vertical += command;
                     break;
                     case "up":
-                    vertical = vertical - Convert.ToInt64(instruction[1]);
+                    vertical -= command;
                     break;
                 }
             }
@@ -43,17 +44,18 @@ public class Solver{
             string[] instruction = s.Split(' ');
             if (instruction.Length > 0)
             {
+                long command = Convert.toInt64(instruction[1]);
                 switch (instruction[0])
                 {
                     case "forward":
-                        horizontal = horizontal + Convert.ToInt64(instruction[1]);
-                        depth = depth + (aim * Convert.ToInt64(instruction[1]));
+                        horizontal += command;
+                        depth += (aim * command);
                         break;
                     case "down":
-                        aim = aim + Convert.ToInt64(instruction[1]);
+                        aim += command;
                         break;
                     case "up":
-                        aim = aim - Convert.ToInt64(instruction[1]);
+                        aim -= command;
                         break;
                 }
             }
