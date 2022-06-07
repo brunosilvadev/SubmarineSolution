@@ -14,7 +14,7 @@ public class Solver{
         foreach(var s in this.readFile){
             string[] instruction = s.Split(' ');
             if(instruction.Length > 0){
-                long command = Convert.toInt64(instruction[1]);
+                long command = Convert.ToInt64(instruction[1]);
                 switch (instruction[0]){
                     case "forward":
                     horizontal += command;
@@ -44,7 +44,7 @@ public class Solver{
             string[] instruction = s.Split(' ');
             if (instruction.Length > 0)
             {
-                long command = Convert.toInt64(instruction[1]);
+                long command = Convert.ToInt64(instruction[1]);
                 switch (instruction[0])
                 {
                     case "forward":
